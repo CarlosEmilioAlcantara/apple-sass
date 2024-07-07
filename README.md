@@ -1,8 +1,8 @@
 # What is this?
-This is a static site clone of the Apple site using tailwind.
+This is a static site clone of the Apple site using SASS.
 
 # Live Version
-A live version of the site can be found [here](https://apple-sass.pages.dev/)
+A live version of the site can be found [here](https://apple-sass.pages.dev/).
 
 # Deployment
 To deploy the site using CloudFlare Pages using direct upload:
