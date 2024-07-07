@@ -1,0 +1,17 @@
+// underscore '_' = partials scss will not generate css for them
+// imports go here, codes must always go to partials
+// partials = sub css files that make up one big css file for easier editing
+// remember the code hierarchy
+@import "01-variable";
+@import "02-base";
+@import "03-helper";
+@import "04-mixins";
+@import "05-utilities";
+
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/banner";
+@import "./layout/slider";
+@import "./layout/footer";
+
+@import "./page/home";

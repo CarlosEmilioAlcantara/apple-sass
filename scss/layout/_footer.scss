@@ -1,0 +1,53 @@
+.footer {
+    p, a {
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
+        color: $dark;
+    }
+    .copyright > div {
+        @include mediaQuery {
+            flex-direction: column;
+        }
+    }
+    .copyright .flex .flex {
+        @include mediaQuery {
+            flex-direction: column;
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+    }
+    .copyright .flex {
+        a {
+            display: flex;
+        }
+    }
+    .grid {
+        @include mediaQuery {
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+        }
+    }
+    .gridItem {
+        h6 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            @include mediaQuery {
+                max-height: 0;
+                height: auto;
+                overflow: hidden;
+                transition: 0.5s ease-in-out;
+            }
+            li {
+                font-size: 1.2rem;
+                margin-bottom: .5rem;
+            }
+            &.open {
+                max-height: 300rem;
+            }
+        }
+    }
+}

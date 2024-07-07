@@ -1,0 +1,12 @@
+// returns css properties and their values
+@mixin flexItem($content:flex-start, $items:flex-start) {
+    display: flex;
+    justify-content: $content;
+    align-items: $items; // flex-start should always be set default
+}
+
+@mixin mediaQuery($breakpoint:$break-sm) {
+    @media screen and (max-width:$breakpoint) {
+        @content;
+    }
+}

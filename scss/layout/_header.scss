@@ -1,0 +1,77 @@
+header {
+    background-color: $dark;
+    backdrop-filter: saturate(100%) blur(20px);
+    position: fixed; /* kahit anong mangyari lumutang ka sa screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+    a {
+        color: $light;
+    }
+}
+
+.toggle-menu {
+    background-color: transparent;
+    border: none;
+    display: none;
+    align-self: center; // aligning just one item/element in a flex
+    transition: 0.5s ease-in-out;
+    span {
+        display: block;
+        width: 2rem;
+        height: 1px;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+        background-color: $light;
+    }
+    &.open {
+        span:first-child { // the first stick
+            transform: rotate(45deg) translate(2px, 2px); // make first stick rotate 45 degrees then mv 2px horizontally and vertically
+        }
+        span:last-child { // the first stick
+            transform: rotate(-45deg) translate(2px, -2px); // make second stick rotate 45 degrees then mv 2px horizontally (note how horizontal means moving the direction it is facing x and y depends on the rotation of the element) and -2px vertically
+        }
+    }
+}
+
+@media screen and (max-width: $break-sm) {
+    nav {
+        // a {
+        //     justify-content: space-between !important;
+        // }
+        ul {
+            background-color: $dark;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100vw;
+            height: 0vh;
+            gap: 1rem !important;
+            justify-content: flex-start !important;
+            align-items: flex-start !important;
+            flex-direction: column;
+            z-index: 9999;
+            overflow: hidden;
+            transition: 0.5s ease-in-out;
+            li {
+                padding-left: 3rem;
+            }
+            li:first-child { // since a is the only child of our li this gives padding to all
+                padding-top: 3rem;
+            }
+            a {
+                color: $light;
+                font-size: 2.5rem !important;
+            }
+
+        }
+        ul.open {
+            height: 100vh;
+        }
+    }
+    .toggle-menu {
+        display: block;
+    }
+}

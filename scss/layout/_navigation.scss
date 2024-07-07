@@ -1,0 +1,15 @@
+nav {
+    ul {
+        // display: flex;
+        // /* gap: 2rem; */
+        // align-items: center; 
+        // /* align-items: start; */ /* like text-align but y-axis/vertical */
+        // justify-content: space-between; /* display equivalent of text-align */
+        @include flexItem(space-between, center);
+        li a { /* a doesn't inherit its parents styling */
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: $light;
+        }
+    }
+}

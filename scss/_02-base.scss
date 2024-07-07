@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px; /* 10px is used as an easy multiplier remember to */
+}                   /*  use rem to make the actual font size of an 
+                    element */
+
+/*html {
+    font-size: 62.5%; *//* Use percentages instead of px much more device */
+/*}*/                     /* dependent */
+
+/* rem vs em */
+/* rem - follows */
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.6; /* 100% + 60% of your element's font-size */
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}

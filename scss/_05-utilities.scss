@@ -1,0 +1,103 @@
+$colors: (
+    'light' : $light, // $key, $val
+    'light-no-alpha' : $light-no-alpha,
+    'text-light' : $text-light,
+    'gray' : $gray,
+    'dark' : $dark,
+    'accent' : $accent,
+    'body' : $text-dark
+);
+
+/* this is basically a for each loop, use with arrays */
+@each $key, $val in $colors {
+    .text {
+        &-#{$key} { // you need the {} over $key for it to expand
+            color: $val; 
+        }
+    }
+
+    .bg {
+        &-#{$key} { // you need the {} over $key for it to expand
+            background-color: $val; 
+        }
+    }
+}
+// in order to pass the value of an array to a class interpolation '#' 
+// is needed, think of it as inserting a value to something that doesn't
+// really take value .text-#{$key} vs color: $val, .text is a class
+// can't take value but color is a property so it readily takes value
+
+$displays: (
+    'grid' : grid, // $key, $val
+    'flex' : flex,
+    'block' : block
+);
+
+@each $key, $val in $displays {
+    .#{$key} {
+        display: $val;
+    }
+}
+
+// for loop use with numbers
+@for $i from 1 through 5 {
+    .gap-#{$i} {
+        grid-gap: $i + rem;
+    }
+    .mb-#{$i} {
+        margin-bottom: $i + rem;
+    }
+    .mt-#{$i} {
+        margin-top: $i + rem;
+    }
+    .bt-#{$i} {
+        @each $key, $val in $colors {
+            &-#{$key} {
+                display: block;
+                width: 100%;
+                border-top: $i + px + ' solid ' + $val;
+            }
+        }
+    }
+    .pad-top-#{$i} {
+        padding-top: $i + rem;
+    }
+    .py-#{$i} { // padding y-axis
+        padding-top: $i + rem;
+        padding-bottom: $i + rem;
+    }
+    .grid-col-#{$i} {
+        grid-template-columns: repeat($i, 1fr); // make $i number columns with 1fr width
+    }
+}
+
+$justify: (
+    'start' : flex-start,
+    'end' : flex-end,
+    'center' : center,
+    'between' : space-between,
+    'around' : space-around,
+    'evenly' : space-evenly
+);
+
+$align: (
+    'start' : flex-start,
+    'end' : flex-end,
+    'center' : center,
+);
+
+@each $key, $val in $justify {
+    .justify-#{$key} {
+        justify-content: $val;
+    }
+}
+
+@each $key, $val in $align {
+    .align-#{$key} {
+        align-items: $val;
+    }
+}
+
+.flex {
+    display: flex;
+}

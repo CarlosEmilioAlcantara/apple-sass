@@ -1,0 +1,106 @@
+// Exclusive sa home page ang mga pupunta dito
+.cta {
+    // font-size: 1.2rem;
+    padding: .6rem 0;
+    text-align: center;
+    margin-top: 4.256rem;
+    p {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        padding: .6rem .4rem;
+    }
+    a {
+        color: $accent;
+        text-decoration: none;
+        &:hover { /* & = parent element so a:hover, called bem*/
+            text-decoration: underline;
+        }
+    }
+}
+
+.product {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        padding: 0 1rem;
+        @include mediaQuery {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__item {
+        // height: calc(62.4rem - 4.4rem);
+        height: 58rem;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        @include flexItem(center, flex-start);
+        padding: 7rem 0;
+        text-align: center;
+        color: $light;
+        h4 {
+            font-size: clamp(1.8rem, 6vw, 3.2rem);
+        }
+        p {
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
+            @include flexItem(center, center);
+            gap: 2rem;
+        }
+        span {
+            opacity: 0.8;
+        }
+        ul { // sa ul mo ilagay display: flex para maging horizontal items
+            @include flexItem(center);
+            margin-top: 1rem;
+            gap: 3rem;
+            li a {
+                text-decoration: none;
+                color: $accent;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &__item.watch {
+        background-image: url("../../images/grid-watch.jpg");
+        @include mediaQuery {
+            background-image: url("../../images/grid-apple-watch-sm.jpg");
+        }
+    }
+    &__item.ipad {
+        background-image: url("../../images/grid-ipad.jpg");
+        @include mediaQuery {
+            background-image: url("../../images/grid-ipad-sm.jpg");
+        }
+    }
+    &__item.studio {
+        background-image: url("../../images/grid-mac-studio.jpg");
+        @include mediaQuery {
+            background-image: url("../../images/grid-mac-studio-sm.jpg");
+        }
+        color: $dark;
+    }
+    &__item.college {
+        color: $dark;
+        background-image: url("../../images/grid-college.jpg");
+        @include mediaQuery {
+            background-image: url("../../images/grid-mobile-college.jpg");
+        }
+        video {
+            overflow-clip-margin: content-box;
+            overflow: clip;
+        }
+    }
+    &__item.mac-pro {
+        background-image: url("../../images/grid-mac-pro.jpg");
+        @include mediaQuery {
+            background-image: url("../../images/grid-mac-sm.jpg");
+        }
+        color: $dark;
+    }
+    &__item.air-pods {
+        background-image: url("../../images/grid-air-pods.jpg");
+        @include mediaQuery {
+            background-image: url("../../images/grid-mobile-airpods-pro.jpg");
+        }
+    }
+}

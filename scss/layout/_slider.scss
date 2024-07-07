@@ -1,0 +1,108 @@
+.slider {
+    position: relative;
+    margin-bottom: 6rem;
+    margin-top: 1rem;
+    isolation: isolate;
+    &__item {
+        position: relative;
+        img {
+            width: 100%;
+            height: 76rem;
+            object-fit: cover;
+        }
+        &__content {
+            position: absolute;
+            left: 8rem;
+            bottom: 8rem;
+            @include flexItem(flex-start, center);
+            gap: 4rem;
+            color: $light-no-alpha;
+            @include mediaQuery {
+                max-width: 27rem;
+                width: 100%;
+                flex-direction: column;
+                // align-items: center !important;
+                text-align: center;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            button {
+                padding: 1.2rem 2.4rem;
+                border-radius: 3rem;
+                border: none;
+                background-color: $light-no-alpha;
+                cursor: pointer;
+            }
+            p {
+                font-size: 2rem;
+                @include mediaQuery {
+                    // font-size: ;
+                }
+                span {
+                    position: relative;
+                    padding-right: 2rem;
+                    font-weight: bold;
+                    @include mediaQuery {
+                        display: block;
+                    }
+                    &:after { // put after content of element w/c is none in this case
+                        content: ''; // required if making shapes using span
+                        position: absolute;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        top: 13px;
+                        right: 8px;
+                        background-color: $light-no-alpha;
+                        @include mediaQuery {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tns-nav {
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        @include mediaQuery {
+            bottom: -5rem;
+        }
+        button {
+            margin: 0 1rem;
+            height: 1rem;
+            width: 1rem;
+            // margin: 0 0.8rem;
+            // height: 0.8rem;
+            // width: 0.8rem;
+            border-radius: 50%;
+            border: none;
+            background-color: #ccc;
+            display: inline !important;
+            gap: 1rem;
+            z-index: 0;
+        }
+    }
+    .tns-nav-active {
+        background-color: $dark;
+    }
+    button[data-action] {
+        position: absolute;
+        bottom: -5rem;
+        right: 2rem;
+        width: 5rem; 
+        height: 5rem;
+        border-radius: 50%;
+        border: none;
+        background-color: $light-no-alpha;
+        z-index: 0;
+    }
+    #tns1-iw {
+        @include mediaQuery {
+            margin: 0.5rem !important;
+        }
+    }
+}

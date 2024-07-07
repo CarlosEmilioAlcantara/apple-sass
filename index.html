@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link href="./css/main.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="flex justify-between align-center"> <!-- kaya linagyan din nav para pag magmomobile yung mga icons space between parin -->
+                <!-- li*13>a[href="#"] make 13 lists with a elements inside them -->
+                <a href="#"><img src="images/icon-logo.svg"></a> <!-- change svg height in their file -->
+                <ul class="gap-4">
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Mac</a></li>
+                    <li><a href="#">iPad</a></li>
+                    <li><a href="#">iPhone</a></li>
+                    <li><a href="#">Watch</a></li>
+                    <li><a href="#">AirPods</a></li>
+                    <li><a href="#">TV & Home</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+                <div class="flex gap-2 justify-between align-center">
+                    <a href="#"><img src="images/icon-search.svg"></a>
+                    <a href="#"><img src="images/icon-cart.svg"></a>
+                    <button class="toggle-menu">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="cta">
+        <p>Save on Mac or iPad with education pricing. Plus get AirPods with Mac and Apple Pencil with iPad.<sup>†</sup> <a href="">Shop now ></a></p>
+    </div>
+
+    <div class="banner iphone-14-pro">
+        <h1>iPhone 14 Pro</h1>
+        <h3>Pro. Beyond.</h3>
+        <ul>
+            <li><a href="">Learn more ></a></li>
+            <li><a href="">Buy ></a></li>
+        </ul>
+    </div>
+
+    <div class="banner iphone-14">
+        <h1>iPhone 14</h1>
+        <h3>Wonderfull.</h3>
+        <ul>
+            <li><a href="">Learn more ></a></li>
+            <li><a href="">Buy ></a></li>
+        </ul>
+    </div>
+
+    <div class="banner macbook-air">
+        <h1>MacBook Air 15"</h1>
+        <h3>Impressively big. Impossibly thin.</h3>
+        <h4>Check back later for availability</h4>
+        <ul>
+            <li><a href="">Learn more ></a></li>
+            <li><a href="">View pricing ></a></li>
+        </ul>
+    </div>
+
+    <div class="product">
+        <div class="wrapper">
+            <div class="product__item watch">
+                <div class="product__content">
+                    <img src="./images/promo-watch.png" alt="grid-watch">
+                    <p>A healthy leap ahead.</p>
+                    <ul>
+                        <li><a href="">Learn more ></a></li>
+                        <li><a href="">View pricing ></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product__item ipad">
+                <div class="product__content">
+                    <h4>iPad Pro</h4>
+                    <p>Supercharged by<img src="./images/promo-ipad.png" alt="grid-ipad"></p>
+                    <ul>
+                        <li><a href="">Learn more ></a></li>
+                        <li><a href="">View pricing ></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product__item studio">
+                <div class="product__content">
+                    <h4>Mac Studio</h4>
+                    <p>Supercharged by M2 Max and M2 Ultra.</p>
+                    <span>Check back later for availability</span>
+                    <ul>
+                        <li><a href="">Learn more ></a></li>
+                        <li><a href="">View pricing ></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product__item college">
+                <div class="product__content">
+                    <h4>Save on Mac or iPad for college.</h4>
+                    <p>Plus get AirPods with Mac and Apple Pencil with iPad.<sup>†</sup></p>
+                    <!-- <video autoplay><source src="./images/college-mac-ipad.mp4"></video> -->
+                    <ul>
+                        <li><a href="">Shop now ></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product__item mac-pro">
+                <div class="product__content">
+                    <h4>Mac Pro</h4>
+                    <p>Transformed by Apple silicon.</p>
+                    <span>Check back later for availability</span>
+                    <ul>
+                        <li><a href="">Learn more ></a></li>
+                        <li><a href="">View pricing ></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product__item air-pods">
+                <div class="product__content">
+                    <h4>AirPods Pro</h4>
+                    <p>Rebuilt from the sound up.</p>
+                    <ul>
+                        <li><a href="">Learn more ></a></li>
+                        <li><a href="">Buy ></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="slider__wrapper">
+            <div class="slider__item">
+                <picture>
+                    <source srcset="./images/slider-movie-1sm.jpg" media="(max-width: 520px)">
+                    <img src="./images/movie-10.jpg" alt="">
+                </picture>
+                <div class="slider__item__content">
+                    <button>Stream Now <span>▶</span></button>
+                    <p><span>Sci-Fi</span>The truth will surface.</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <picture>
+                    <source srcset="./images/slider-movie-2sm.jpg" media="(max-width: 520px)">
+                    <img src="./images/movie-2.jpg" alt="movie-1">
+                </picture>
+                <div class="slider__item__content">
+                    <button>Stream Now <span>▶</span></button>
+                    <p><span>Documentary</span>Unknown. Unexplained. Unbelievable. Until now.</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <picture>
+                        <source srcset="./images/slider-movie-3sm.jpg" media="(max-width: 520px)">
+                        <img src="./images/movie-3.jpg" alt="movie-1">
+                </picture>
+                <div class="slider__item__content">
+                    <button>Stream Now <span>▶</span></button>
+                    <p><span>Sci-Fi</span>The truth will surface</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <picture>
+                    <source srcset="./images/slider-movie-4sm.jpg" media="(max-width: 520px)">
+                    <img src="./images/movie-4.jpg" alt="movie-1">
+                </picture>
+                <div class="slider__item__content">
+                    <button>Stream Now <span>▶</span></button>
+                    <p><span>Sci-Fi</span>The truth will surface</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <picture>
+                    <source srcset="./images/slider-movie-5sm.jpg" media="(max-width: 520px)">
+                    <img src="./images/movie-5.jpg" alt="movie-1">
+                </picture>
+                <div class="slider__item__content">
+                    <button>Stream Now <span>▶</span></button>
+                    <p><span>Sci-Fi</span>The truth will surface</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <picture>
+                    <source srcset="./images/slider-movie-6sm.jpg" media="(max-width: 520px)">
+                    <img src="./images/movie-6.jpg" alt="movie-1">
+                </picture>
+                <div class="slider__item__content">
+                    <button>Stream Now <span>▶</span></button>
+                    <p><span>Sci-Fi</span>The truth will surface</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <picture>
+                    <source srcset="./images/slider-movie-7sm.jpg" media="(max-width: 520px)">
+                    <img src="./images/movie-7.jpg" alt="movie-1">
+                </picture>
+                <div class="slider__item__content">
+                    <button>Stream Now <span>▶</span></button>
+                    <p><span>Sci-Fi</span>The truth will surface</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <picture>
+                    <source srcset="./images/slider-movie-8sm.jpg" media="(max-width: 520px)">
+                    <img src="./images/movie-8.jpg" alt="movie-1">
+                </picture>
+                <div class="slider__item__content">
+                    <button>Stream Now <span>▶</span></button>
+                    <p><span>Sci-Fi</span>The truth will surface</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <picture>
+                    <source srcset="./images/slider-movie-9sm.jpg" media="(max-width: 520px)">
+                    <img src="./images/movie-9.jpg" alt="movie-1">
+                </picture>
+                <div class="slider__item__content">
+                    <button>Stream Now <span>▶</span></button>
+                    <p><span>Sci-Fi</span>The truth will surface</p>
+                </div>
+            </div>
+            <div class="slider__item">
+                <picture>
+                    <source srcset="./images/slider-movie-10sm.jpg" media="(max-width: 520px)">
+                    <img src="./images/movie-9.jpg" alt="movie-1">
+                </picture>
+                <div class="slider__item__content">
+                    <button>Stream Now <span>▶</span></button>
+                    <p><span>Sci-Fi</span>The truth will surface</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer bg-gray gap-5 py-2">
+        <div class="container">
+            <p><sup>†</sup>Qualified Purchasers can receive Promotion Savings when they purchase an Eligible Product with Promotion Product at a Qualifying Location. Only one Promotion Product per Eligible Product per Qualified Purchaser. Offer subject to availability. Subject to terms and conditions <a href="">herein.</a></p>
+            <span class="bt-1-text-light mt-2 mb-2"></span>
+            <div class="grid mt-2 grid-col-5">
+                <div class="gridItem">
+                    <div>
+                        <h6>Shop and Learn</h6>
+                        <ul class="mb-1">
+                            <li>Store</li>
+                            <li>Mac</li>
+                            <li>iPad</li>
+                            <li>iPhone</li>
+                            <li>Watch</li>
+                            <li>AirPods</li>
+                            <li>TV & Home</li>
+                            <li>AirTag</li>
+                            <li>Accessories</li>
+                            <li>Gift Cards</li>
+                        </ul>
+                        <h6>Apple Wallet</h6>
+                        <ul class="mb-1">
+                            <li>Wallet</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gridItem">
+                    <div>
+                        <h6>Account</h6>
+                        <ul class="mb-1">
+                            <li>Manage Your Apple ID</li>
+                            <li>Apple Store Account</li>
+                            <li>iCloud.com</li>
+                        </ul>
+                        <h6>Entertainment</h6>
+                        <ul class="mb-1">
+                            <li>Apple One</li>
+                            <li>Apple TV+</li>
+                            <li>Apple Music</li>
+                            <li>Apple Arcade</li>
+                            <li>Apple Podcasts</li>
+                            <li>Apple Books</li>
+                            <li>App Store</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gridItem">
+                    <div>
+                        <h6>Apple Store</h6>
+                        <ul class="mb-1">
+                            <li>Apple Store App</li>
+                            <li>Apple Recycling Program</li>
+                            <li>Order Status</li>
+                            <li>Shopping Help</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gridItem">
+                    <div>
+                        <h6>For Business</h6>
+                        <ul class="mb-1">
+                            <li>Apple and Business</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h6>For Education</h6>
+                        <ul class="mb-1">
+                            <li>Apple and Education</li>
+                            <li>Shop for University</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gridItem">
+
+                    <div>
+                        <h6>Apple Values</h6>
+                        <ul class="mb-1">
+                            <li>Accessibility</li>
+                            <li>Environment</li>
+                            <li>Privacy</li>
+                            <li>Supplier Responsibility</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h6>About Apple</h6>
+                        <ul class="mb-1">
+                            <li>Investors</li>
+                            <li>Ethics & Compliance</li>
+                            <li>Events</li>
+                            <li>Contact Apple</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p>More ways to shop: Find a retailer near you. Or call 1800-1651-0525 (Smart/PLDT), 1800-8474-7382 (Globe).</p>
+            <span class="bt-1-text-light mt-1 mb-1"></span>
+            <div class="copyright">
+                <div class="flex justify-between align-center">
+                    <div class="flex gap-1 align-center">
+                        <p>Copyright © 2023 Apple Inc. All rights reserved.</p>
+                        <ul class="flex gap-2 align-center">
+                            <li><a href="" class="text-body">Privacy </a></li>
+                            <li><a href="" class="text-body">Policy </a></li>
+                            <li><a href="" class="text-body">Terms of Use</a></li>
+                            <li><a href="" class="text-body">Sales and Refunds </a></li>
+                            <li><a href="" class="text-body">Legal </a></li>
+                            <li><a href="" class="text-body">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <a href="$">Philippines</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js" integrity="sha512-j+F4W//4Pu39at5I8HC8q2l1BNz4OF3ju39HyWeqKQagW6ww3ZF9gFcu8rzUbyTDY7gEo/vqqzGte0UPpo65QQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>  
+        var slider = tns({
+            container: '.slider__wrapper',
+            // items: 3,
+            items: 1,
+            slideBy: 'page',
+            autoplay: true,
+            edgePadding: 340,
+            center: true,
+            gutter: 15,
+            // fixedWidth: 1200,
+            controls: false,
+            responsive: {
+                620: {
+                    edgePadding: 120,
+                }
+            }
+        });
+
+        const toggle = document.querySelector('.toggle-menu');
+        const menu = document.querySelector('nav ul');
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('open');
+            menu.classList.toggle('open');
+        });
+
+        const titles = document.querySelectorAll('.gridItem h6');
+        titles.forEach((title)=> {
+            title.addEventListener('click', () => {
+                title.nextElementSibling.classList.toggle('open');//bigyan sunod na element ng open na class
+            })
+        })
+    </script>
+</body>
+</html>

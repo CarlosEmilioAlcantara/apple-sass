@@ -1,0 +1,14 @@
+/* variables in another way than root */
+// returns values using variables
+$dark: rgba(21, 22, 23, .8); /* always use generic terms instead of specific color names */
+$light: rgba(250, 251, 253, .8); /* always add opacity to colors and not elements */
+$light-no-alpha: rgba(250, 251, 253); /* always add opacity to colors and not elements */
+$accent: #2996ff;
+$text-dark: #0d1d1f;
+$text-light: #5e6e73;
+$gray: #f5f5f7;
+
+$break-sm: 520px;
+$break-md: 780px;
+$break-lg: 1040px;
+$break-xl: 1320px;
